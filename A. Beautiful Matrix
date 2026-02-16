@@ -1,0 +1,7 @@
+import math
+for i in range(5):
+	matrix = list(map(int, input().split()))
+	if 1 in matrix:
+		c = matrix.index(1)
+		perfect_matrix = abs(i - 2) + abs(c -2)
+print(perfect_matrix)
