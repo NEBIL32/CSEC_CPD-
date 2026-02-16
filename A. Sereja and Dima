@@ -1,0 +1,26 @@
+n = int(input())
+c = list(map(int, input().split()))
+
+left = 0
+right = n - 1
+
+sereja = 0
+dima = 0
+turn = 0  
+
+while left <= right:
+    if c[left] > c[right]:
+        pick = c[left]
+        left += 1
+    else:
+        pick = c[right]
+        right -= 1
+
+    if turn == 0:
+        sereja += pick
+    else:
+        dima += pick
+
+    turn = 1 - turn 
+
+print(sereja, dima)
