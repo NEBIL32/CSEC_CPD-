@@ -1,0 +1,10 @@
+s = input().strip()
+t = input().strip()
+
+i = 0  # Start at the first stone (0-based index)
+
+for j in t:
+    if i < len(s) and j == s[i]:
+        i += 1 
+
+print(i + 1)
